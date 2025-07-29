@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wilapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wilapp
+  template:
+    metadata:
+      labels:
+        app: wilapp
+    spec:
+      containers:
+        - name: wilapp
+          image: paulbouwer/hello-kubernetes:1.7  # v1
+          ports:
+            - containerPort: 8080
