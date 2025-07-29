@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wilapp
+  labels:
+    app: wilapp
 spec:
   replicas: 1
   selector:
@@ -14,6 +16,6 @@ spec:
     spec:
       containers:
         - name: wilapp
-          image: paulbouwer/hello-kubernetes:1.7  # v1
+          image: wil42/playground:v1
           ports:
-            - containerPort: 8080
+            - containerPort: 80
