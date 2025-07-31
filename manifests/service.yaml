@@ -10,5 +10,4 @@ spec:
     - name: http
       port: 8888           # Service-Port
       targetPort: 8888     # << wichtig
-      nodePort: 30088     # irgendein Port zwischen 30000–32767
-  type: NodePort
+      
